@@ -1,8 +1,14 @@
 from django import forms
 
-class PurchaseOrderForm(forms.Form):
-    po_number = forms.CharField(label='Purchase Order Number', max_length=20)
-    supplier = forms.CharField(label='Supplier', max_length=100)
-    ordered_items = forms.CharField(label='Ordered Items', widget=forms.Textarea)
-    order_date = forms.DateField(label='Order Date')
-    delivery_date = forms.DateField(label='Delivery Date')
+class EmployeeForm(forms.Form):
+    em_id = forms.CharField(label='Employee ID', max_length=10)
+    name = forms.CharField(label='Name', max_length=100)
+    phone_num = forms.CharField(label='Contact Number', max_length=10)
+    email_address = forms.CharField(label='Name', max_length=100)
+    address = forms.DateField(label='Address', widget=forms.Textarea)
+
+class FinanceOfficerForm(forms.Form):
+    fo_id = forms.CharField(label='Finance Officer ID', max_length=10)
+    name = forms.CharField(label='Name', max_length=100)
+    phone_num = forms.CharField(label='Contact Number', max_length=10)
+    address = forms.DateField(label='Address', widget=forms.Textarea)

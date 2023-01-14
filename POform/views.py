@@ -1,15 +1,28 @@
 from django.shortcuts import render, redirect
-from .forms import PurchaseOrderForm
+from .forms import EmployeeForm, FinanceOfficerForm
 
-def purchase_order(request):
+def employee(request):
     if request.method == 'POST':
-        form = PurchaseOrderForm(request.POST)
+        form = EmployeeForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('success')
     else:
-        form = PurchaseOrderForm()
-    return render(request, 'purchase_order.html', {'form': form})
+        form = EmployeeForm()
+    return render(request, 'Employee_details_page.html', {'form': form})
+
+def purchase_order_success(request):
+    return render(request, 'Employee_details_page.html')
+
+def finance_officer(request):
+    if request.method == 'POST':
+        form = FinanceOfficerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success')
+    else:
+        form = FinanceOfficerForm()
+    return render(request, 'FinanceOfficer_details_page.html', {'form': form})
 
 def purchase_order_success(request):
     return render(request, 'purchase_order_success.html')
