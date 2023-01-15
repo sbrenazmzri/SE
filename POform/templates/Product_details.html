@@ -1,0 +1,8 @@
+<h1>D. Product</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <a href="{% url 'Purchase_Order_Page' %}" class="btn btn-secondary">Next</a>
+    <a href="{% url 'Supplier_Page' %}" class="btn btn-secondary">Back</a>
+
+</form>

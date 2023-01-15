@@ -1,0 +1,8 @@
+<h1>E. Purchase Order</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+    <a href="{% url 'Product_Page' %}" class="btn btn-secondary">Back</a>
+
+</form>

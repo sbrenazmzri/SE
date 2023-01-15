@@ -2,5 +2,7 @@
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="">
+    <a href="{% url 'Supplier_Page' %}" class="btn btn-secondary">Next</a>
+    <a href="{% url 'Employee_Page' %}" class="btn btn-secondary">Back</a>
+
 </form>

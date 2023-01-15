@@ -2,5 +2,6 @@
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Next">
+    <a href="{% url 'FinanceOfficer_Page' %}" class="btn btn-secondary">Next</a>
+
 </form>
